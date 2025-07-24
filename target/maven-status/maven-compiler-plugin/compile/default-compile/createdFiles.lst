@@ -1,3 +1,4 @@
+com/clevermoe/inventory/model/OrderSummary.class
 com/clevermoe/inventory/model/Quotation.class
 com/clevermoe/inventory/service/CustomerProfileService.class
 com/clevermoe/inventory/model/OrderItem.class
@@ -20,6 +21,7 @@ com/clevermoe/inventory/controller/TariffCustomsController.class
 com/clevermoe/inventory/controller/RecommendationController.class
 com/clevermoe/inventory/controller/InventoryManagementController.class
 com/clevermoe/inventory/model/LogisticsShipping.class
+com/clevermoe/inventory/repository/OrderSummaryRepository.class
 com/clevermoe/inventory/repository/LogisticsShippingRepository.class
 com/clevermoe/inventory/service/ShippingOptionService.class
 com/clevermoe/inventory/service/ChangeEventService.class
@@ -32,6 +34,7 @@ com/clevermoe/inventory/controller/ChangeEventController.class
 com/clevermoe/inventory/service/InventoryManagementService.class
 com/clevermoe/inventory/repository/OrderManagementRepository.class
 com/clevermoe/inventory/service/ProductCatalogService.class
+com/clevermoe/inventory/service/OrderSummaryService.class
 com/clevermoe/inventory/model/TaxCalculation.class
 com/clevermoe/inventory/repository/TaxCalculationRepository.class
 com/clevermoe/inventory/repository/ShippingOptionRepository.class

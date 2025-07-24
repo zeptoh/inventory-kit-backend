@@ -13,7 +13,7 @@ public class ProductCatalog {
     @Id
     private String id;
     private String name;
-    private String code;
+    private String productId;
     private String description;
     private String brand;
     private String category;
@@ -42,12 +42,12 @@ public class ProductCatalog {
         this.name = name;
     }
 
-    public String getCode() {
-        return code;
+    public String getProductId() {
+        return productId;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 
     public String getDescription() {

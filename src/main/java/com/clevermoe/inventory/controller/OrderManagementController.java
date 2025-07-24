@@ -31,6 +31,30 @@ public class OrderManagementController {
     @Autowired
     private OrderSummaryService summaryService;
 
+    @Autowired
+    private ProductCatalogService productCatalogService;
+
+    @Autowired
+    private PricingEngineService pricingEngineService;
+
+    @Autowired
+    private CustomerProfileService customerProfileService;
+
+    @Autowired
+    private InventoryManagementService inventoryManagementService;
+
+    @Autowired
+    private TaxCalculationService taxCalculationService;
+
+    @Autowired
+    private TariffCustomsService tariffCustomsService;
+
+    @Autowired
+    private ShippingOptionService shippingOptionService;
+
+    @Autowired
+    private QuotationService quotationService;
+
     @GetMapping
     @Operation(summary = "Get all OrderManagement entries")
     public List<OrderManagement> getAll() {
@@ -42,14 +66,14 @@ public class OrderManagementController {
     public OrderSummary create(@RequestBody OrderManagement obj) {
         OrderManagement om = service.create(obj);
         OrderSummary os = new OrderSummary();
-        os.setProductCatalog(new ProductCatalogService().findByCode(obj.getProductCode()));
-        os.setPricingEngine(new PricingEngineService().findByProductId(obj.getProductCode()));
-        os.setInventoryManagement(new InventoryManagementService().findByProductId(obj.getProductCode()));
-        os.setTaxCalculation(new TaxCalculationService().findByProductId(obj.getProductCode()));
-        os.setTarrifCustoms(new TariffCustomsService().findByProductId(obj.getProductCode()));
-        os.setCustomer(new CustomerProfileService().findById(obj.getCustomerId()));
-        os.setShippingOption(new ShippingOptionService().findById(obj.getShippingId()));
-        os.setQuotation(new QuotationService().findById(obj.getQuotationId()));
+        os.setProductCatalog(productCatalogService.findByProductId(obj.getProductId()));
+        os.setPricingEngine(pricingEngineService.findByProductId(obj.getProductId()));
+        os.setInventoryManagement(inventoryManagementService.findByProductId(obj.getProductId()));
+        os.setTaxCalculation(taxCalculationService.findByProductId(obj.getProductId()));
+        os.setTarrifCustoms(tariffCustomsService.findByProductId(obj.getProductId()));
+        os.setCustomer(customerProfileService.findById(obj.getCustomerId()));
+        os.setShippingOption(shippingOptionService.findById(obj.getShippingId()));
+        os.setQuotation(quotationService.findById(obj.getQuotationId()));
         os.setOrderDate(om.getOrderDate());
         os.setOrderStatus(om.getOrderStatus());
 

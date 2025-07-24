@@ -10,7 +10,7 @@ public class OrderManagement {
 
     @Id
     private String id;
-    private String productCode;
+    private String productId;
     private String pricingId;
     private String inventoryId;
     private String taxId;
@@ -29,12 +29,12 @@ public class OrderManagement {
         this.id = id;
     }
 
-    public String getProductCode() {
-        return productCode;
+    public String getProductId() {
+        return productId;
     }
 
-    public void setProductCode(String productCode) {
-        this.productCode = productCode;
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 
     public String getPricingId() {

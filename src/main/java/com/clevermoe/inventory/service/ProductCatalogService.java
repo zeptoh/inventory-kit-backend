@@ -16,8 +16,8 @@ public class ProductCatalogService {
         return repository.findAll();
     }
 
-    public ProductCatalog findByCode(String code) {
-        return repository.findByCode(code);
+    public ProductCatalog findByProductId(String id) {
+        return repository.findByProductId(id);
     }
 
     public ProductCatalog create(ProductCatalog obj) {
