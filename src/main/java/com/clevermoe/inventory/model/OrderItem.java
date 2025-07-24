@@ -1,17 +1,19 @@
 package com.clevermoe.inventory.model;
 
 public class OrderItem {
-    private String productCode;
+    private String productId;
     private int quantity;
-    private double unitPrice;
-    private double totalPrice;
+    private double unitprice;
+    private double taxAmount;
+    private double dutyRate;
+    private double discountAmount;
 
-    public String getProductCode() {
-        return productCode;
+    public String getProductId() {
+        return productId;
     }
 
-    public void setProductCode(String productCode) {
-        this.productCode = productCode;
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 
     public int getQuantity() {
@@ -22,19 +24,36 @@ public class OrderItem {
         this.quantity = quantity;
     }
 
-    public double getUnitPrice() {
-        return unitPrice;
+    public double getUnitprice() {
+        return unitprice;
     }
 
-    public void setUnitPrice(double unitPrice) {
-        this.unitPrice = unitPrice;
+    public void setUnitprice(double unitprice) {
+        this.unitprice = unitprice;
     }
 
-    public double getTotalPrice() {
-        return totalPrice;
+    public double getTaxAmount() {
+        return taxAmount;
     }
 
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setTaxAmount(double taxAmount) {
+        this.taxAmount = taxAmount;
     }
+
+    public double getDutyRate() {
+        return dutyRate;
+    }
+
+    public void setDutyRate(double dutyRate) {
+        this.dutyRate = dutyRate;
+    }
+
+    public double getDiscountAmount() {
+        return discountAmount;
+    }
+
+    public void setDiscountAmount(double discountAmount) {
+        this.discountAmount = discountAmount;
+    }
+
 }

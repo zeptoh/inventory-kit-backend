@@ -2,19 +2,23 @@ package com.clevermoe.inventory.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import java.math.BigDecimal;
 import java.util.List;
 
-@Document(collection = "pricingengine")
+@Document(collection = "PricingEngine")
 public class PricingEngine {
 
     @Id
     private String id;
 
+    private String productId;
+
     private String name;
 
     // Base price of the product
-    private BigDecimal basePrice;
+    private Double basePrice;
+
+    // Discount price of the product
+    private Double discount;
 
     // Discount percentage for MVP customers
     private Double mvpDiscountPercent;
@@ -51,11 +55,11 @@ public class PricingEngine {
         this.name = name;
     }
 
-    public BigDecimal getBasePrice() {
+    public Double getBasePrice() {
         return basePrice;
     }
 
-    public void setBasePrice(BigDecimal basePrice) {
+    public void setBasePrice(Double basePrice) {
         this.basePrice = basePrice;
     }
 
@@ -113,6 +117,22 @@ public class PricingEngine {
 
     public void setValidTo(String validTo) {
         this.validTo = validTo;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public Double getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(Double discount) {
+        this.discount = discount;
     }
 
 }

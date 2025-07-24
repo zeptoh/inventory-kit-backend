@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.List;
 
-@Document(collection = "inventorymanagement")
+@Document(collection = "InventoryManagement")
 public class InventoryManagement {
 
     @Id
@@ -12,11 +12,16 @@ public class InventoryManagement {
 
     private String name;
 
+    private String productId;
+
     // Product SKU or code
     private String productCode;
 
     // Total stock available across all warehouses
-    private int totalStock;
+    private int stockLevel;
+
+    // Location
+    private String location;
 
     // List of stock details per warehouse
     private List<WarehouseStock> warehouseStocks;
@@ -25,7 +30,7 @@ public class InventoryManagement {
     private int estimatedDeliveryDays;
 
     // Reorder threshold
-    private int reorderLevel;
+    private int reorderThreshold;
 
     // Supplier info
     private String supplierName;
@@ -58,11 +63,11 @@ public class InventoryManagement {
     }
 
     public int getTotalStock() {
-        return totalStock;
+        return stockLevel;
     }
 
-    public void setTotalStock(int totalStock) {
-        this.totalStock = totalStock;
+    public void setTotalStock(int stockLevel) {
+        this.stockLevel = stockLevel;
     }
 
     public List<WarehouseStock> getWarehouseStocks() {
@@ -82,11 +87,11 @@ public class InventoryManagement {
     }
 
     public int getReorderLevel() {
-        return reorderLevel;
+        return reorderThreshold;
     }
 
-    public void setReorderLevel(int reorderLevel) {
-        this.reorderLevel = reorderLevel;
+    public void setReorderLevel(int reorderThreshold) {
+        this.reorderThreshold = reorderThreshold;
     }
 
     public String getSupplierName() {
@@ -103,6 +108,22 @@ public class InventoryManagement {
 
     public void setLastRestockDate(String lastRestockDate) {
         this.lastRestockDate = lastRestockDate;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
 }

@@ -16,13 +16,24 @@ public class InventoryManagementController {
     @Autowired
     private InventoryManagementService service;
 
-    @GetMapping
+    @GetMapping("all")
     @Operation(summary = "Get all InventoryManagement entries")
     public List<InventoryManagement> getAll() {
         return service.getAll();
     }
 
-    @PostMapping
+    @PostMapping("product")
+    @Operation(summary = "Find a InventoryManagement entry for a specified product ")
+    public InventoryManagement findByProductId(@RequestBody InventoryManagement obj) {
+        InventoryManagement im = service.findByProductId(obj.getProductId());
+        if (im != null) {
+            return im;
+        } else {
+            return obj;
+        }
+    }
+
+    @PostMapping("create")
     @Operation(summary = "Create a new InventoryManagement entry")
     public InventoryManagement create(@RequestBody InventoryManagement obj) {
         return service.create(obj);

@@ -5,17 +5,19 @@ import java.time.LocalDateTime;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+@Document(collection = "Customer")
 public class Customer {
     @Id
     private String id;
     private String email;
     private String phoneNumber;
     private String address;
+    private String isLoyal;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private boolean isActive;
     private String notes;
+    private String addressZone;
 
     public String getId() {
         return id;
@@ -79,6 +81,22 @@ public class Customer {
 
     public void setNotes(String notes) {
         this.notes = notes;
+    }
+
+    public String getAddressZone() {
+        return addressZone;
+    }
+
+    public void setAddressZone(String addressZone) {
+        this.addressZone = addressZone;
+    }
+
+    public String getIsLoyal() {
+        return isLoyal;
+    }
+
+    public void setIsLoyal(String isLoyal) {
+        this.isLoyal = isLoyal;
     }
 
 }

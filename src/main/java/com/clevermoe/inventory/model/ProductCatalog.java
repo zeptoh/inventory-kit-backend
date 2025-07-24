@@ -7,12 +7,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Document(collection = "productcatalog")
+@Document(collection = "ProductCatalog")
 public class ProductCatalog {
 
     @Id
     private String id;
     private String name;
+    private String code;
     private String description;
     private String brand;
     private String category;
@@ -39,6 +40,14 @@ public class ProductCatalog {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getDescription() {

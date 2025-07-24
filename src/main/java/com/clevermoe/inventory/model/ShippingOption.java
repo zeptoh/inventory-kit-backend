@@ -1,8 +1,15 @@
 package com.clevermoe.inventory.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "ShippingOption")
 public class ShippingOption {
+    @Id
     private String id;
     private String name;
+
+    private String addressZone;
 
     // Carrier details
     private String carrierName;
@@ -107,4 +114,13 @@ public class ShippingOption {
     public void setInsuranceIncluded(boolean insuranceIncluded) {
         this.insuranceIncluded = insuranceIncluded;
     }
+
+    public String getAddressZone() {
+        return addressZone;
+    }
+
+    public void setAddressZone(String addressZone) {
+        this.addressZone = addressZone;
+    }
+
 }

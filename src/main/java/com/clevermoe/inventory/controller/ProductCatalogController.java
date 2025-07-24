@@ -9,14 +9,14 @@ import io.swagger.v3.oas.annotations.Operation;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/productcatalog")
+@RequestMapping("/api")
 @Tag(name = "ProductCatalog", description = "API for ProductCatalog")
 public class ProductCatalogController {
 
     @Autowired
     private ProductCatalogService service;
 
-    @GetMapping
+    @GetMapping("/productcatalog")
     @Operation(summary = "Get all ProductCatalog entries")
     public List<ProductCatalog> getAll() {
         return service.getAll();

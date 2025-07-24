@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.math.BigDecimal;
 
-@Document(collection = "tariffcustoms")
+@Document(collection = "TariffCustoms")
 public class TariffCustoms {
 
     @Id
@@ -13,6 +13,8 @@ public class TariffCustoms {
     private String name;
 
     // Product details
+    private String productId;
+
     private String productCode;
     private String productCategory;
 
@@ -21,6 +23,10 @@ public class TariffCustoms {
     private String destinationCountry;
 
     // Tariff and customs duty rates
+    private String tariffCode;
+    private Double dutyRate;
+    private String countryOfOrigin;
+
     private BigDecimal importDutyRate;
     private BigDecimal exportDutyRate;
     private BigDecimal customsHandlingFee;
@@ -157,6 +163,38 @@ public class TariffCustoms {
 
     public void setCalculationDate(String calculationDate) {
         this.calculationDate = calculationDate;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public String getTarrifCode() {
+        return tariffCode;
+    }
+
+    public void setTarrifCode(String tarrifCode) {
+        this.tariffCode = tarrifCode;
+    }
+
+    public Double getDutyRate() {
+        return dutyRate;
+    }
+
+    public void setDutyRate(Double dutyRate) {
+        this.dutyRate = dutyRate;
+    }
+
+    public String getCountryOfOrigin() {
+        return countryOfOrigin;
+    }
+
+    public void setCountryOfOrigin(String countryOfOrigin) {
+        this.countryOfOrigin = countryOfOrigin;
     }
 
 }

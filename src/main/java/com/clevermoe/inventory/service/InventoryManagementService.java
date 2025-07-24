@@ -1,6 +1,7 @@
 package com.clevermoe.inventory.service;
 
 import com.clevermoe.inventory.model.InventoryManagement;
+import com.clevermoe.inventory.model.PricingEngine;
 import com.clevermoe.inventory.repository.InventoryManagementRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,10 @@ public class InventoryManagementService {
 
     public List<InventoryManagement> getAll() {
         return repository.findAll();
+    }
+
+    public InventoryManagement findByProductId(String id) {
+        return repository.findByProductId(id);
     }
 
     public InventoryManagement create(InventoryManagement obj) {

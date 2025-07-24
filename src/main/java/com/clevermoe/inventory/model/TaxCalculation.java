@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.math.BigDecimal;
 
-@Document(collection = "taxcalculation")
+@Document(collection = "TaxCalculation")
 public class TaxCalculation {
 
     @Id
@@ -15,17 +15,21 @@ public class TaxCalculation {
     // Product or service code
     private String itemCode;
 
+    private String productId;
+
     // Location details for tax computation
     private String country;
     private String state;
     private String city;
 
     // Tax rates
+    private Double taxRate;
     private BigDecimal localTaxRate;
     private BigDecimal stateTaxRate;
     private BigDecimal federalTaxRate;
 
     // Computed tax amounts
+    private Double taxAmount;
     private BigDecimal localTaxAmount;
     private BigDecimal stateTaxAmount;
     private BigDecimal federalTaxAmount;
@@ -157,6 +161,30 @@ public class TaxCalculation {
 
     public void setCalculationDate(String calculationDate) {
         this.calculationDate = calculationDate;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public Double getTaxRate() {
+        return taxRate;
+    }
+
+    public void setTaxRate(Double taxRate) {
+        this.taxRate = taxRate;
+    }
+
+    public Double getTaxAmount() {
+        return taxAmount;
+    }
+
+    public void setTaxAmount(Double taxAmount) {
+        this.taxAmount = taxAmount;
     }
 
 }

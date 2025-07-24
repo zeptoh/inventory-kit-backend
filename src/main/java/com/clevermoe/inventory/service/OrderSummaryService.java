@@ -1,23 +1,22 @@
 package com.clevermoe.inventory.service;
 
-import com.clevermoe.inventory.model.ShippingOption;
-import com.clevermoe.inventory.repository.ShippingRepository;
+import com.clevermoe.inventory.model.OrderSummary;
+import com.clevermoe.inventory.repository.OrderSummaryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
-public class ShippingService {
+public class OrderSummaryService {
 
     @Autowired
-    private ShippingRepository repository;
+    private OrderSummaryRepository repository;
 
-    public List<ShippingOption> getAll() {
+    public List<OrderSummary> getAll() {
         return repository.findAll();
     }
 
-    public ShippingOption create(ShippingOption obj) {
+    public OrderSummary create(OrderSummary obj) {
         return repository.save(obj);
     }
 }

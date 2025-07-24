@@ -1,5 +1,6 @@
 package com.clevermoe.inventory.controller;
 
+import com.clevermoe.inventory.model.PricingEngine;
 import com.clevermoe.inventory.model.TaxCalculation;
 import com.clevermoe.inventory.service.TaxCalculationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,13 +17,23 @@ public class TaxCalculationController {
     @Autowired
     private TaxCalculationService service;
 
-    @GetMapping
+    @GetMapping("/all")
     @Operation(summary = "Get all TaxCalculation entries")
     public List<TaxCalculation> getAll() {
         return service.getAll();
     }
 
-    @PostMapping
+    @PostMapping("/product")
+    @Operation(summary = "Find a PricingEngine entry for a defined product")
+    public TaxCalculation findById(@RequestBody TaxCalculation obj) {
+        TaxCalculation tc = service.findByProductId(obj.getProductId());
+        if (tc != null) {
+            return tc;
+        } else
+            return obj;
+    }
+
+    @PostMapping("/create")
     @Operation(summary = "Create a new TaxCalculation entry")
     public TaxCalculation create(@RequestBody TaxCalculation obj) {
         return service.create(obj);

@@ -16,6 +16,10 @@ public class TaxCalculationService {
         return repository.findAll();
     }
 
+    public TaxCalculation findByProductId(String id) {
+        return repository.findByProductId(id);
+    }
+
     public TaxCalculation create(TaxCalculation obj) {
         return repository.save(obj);
     }

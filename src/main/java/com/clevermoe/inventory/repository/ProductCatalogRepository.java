@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ProductCatalogRepository extends MongoRepository<ProductCatalog, String> {
+    ProductCatalog findByCode(String code);
 }

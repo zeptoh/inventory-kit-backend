@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PricingEngineRepository extends MongoRepository<PricingEngine, String> {
+    PricingEngine findByProductId(String productId);
 }

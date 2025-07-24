@@ -16,6 +16,14 @@ public class CustomerProfileService {
         return repository.findAll();
     }
 
+    public Customer findById(String id) {
+        return repository.findById(id).orElseGet(() -> null);
+    }
+
+    public Customer findByEmail(String email) {
+        return repository.findByEmail(email);
+    }
+
     public Customer create(Customer obj) {
         return repository.save(obj);
     }

@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TaxCalculationRepository extends MongoRepository<TaxCalculation, String> {
+    TaxCalculation findByProductId(String productId);
 }

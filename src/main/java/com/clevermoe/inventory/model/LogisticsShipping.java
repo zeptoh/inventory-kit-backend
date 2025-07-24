@@ -3,7 +3,7 @@ package com.clevermoe.inventory.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "logisticsshipping")
+@Document(collection = "LogisticsShipping")
 public class LogisticsShipping {
 
     @Id

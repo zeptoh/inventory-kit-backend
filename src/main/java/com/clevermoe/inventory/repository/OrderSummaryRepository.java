@@ -1,10 +1,9 @@
 package com.clevermoe.inventory.repository;
 
-import com.clevermoe.inventory.model.Customer;
+import com.clevermoe.inventory.model.OrderSummary;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CustomerProfileRepository extends MongoRepository<Customer, String> {
-    Customer findByEmail(String email);
+public interface OrderSummaryRepository extends MongoRepository<OrderSummary, String> {
 }

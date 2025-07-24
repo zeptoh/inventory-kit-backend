@@ -16,6 +16,10 @@ public class PricingEngineService {
         return repository.findAll();
     }
 
+    public PricingEngine findByProductId(String id) {
+        return repository.findByProductId(id);
+    }
+
     public PricingEngine create(PricingEngine obj) {
         return repository.save(obj);
     }
