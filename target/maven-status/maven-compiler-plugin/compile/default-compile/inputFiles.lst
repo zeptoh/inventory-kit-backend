@@ -23,8 +23,14 @@
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/model/PricingEngine.java
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/model/PricingRequest.java
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/model/ProductCatalog.java
+/Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/model/ProductRelation.java
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/model/PromotionalOffer.java
+/Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/model/PurchaseHistory.java
+/Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/model/PurchaseRecord.java
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/model/Quotation.java
+/Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/model/Recommendation.java
+/Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/model/RecommendationRequest.java
+/Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/model/RelatedProduct.java
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/model/ShippingOption.java
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/model/TariffCustoms.java
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/model/TaxCalculation.java
@@ -37,6 +43,7 @@
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/repository/OrderSummaryRepository.java
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/repository/PricingEngineRepository.java
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/repository/ProductCatalogRepository.java
+/Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/repository/PurchaseHistoryRepository.java
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/repository/QuotationRepository.java
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/repository/ShippingOptionRepository.java
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/repository/TariffCustomsRepository.java
@@ -48,6 +55,7 @@
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/service/OrderSummaryService.java
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/service/PricingEngineService.java
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/service/ProductCatalogService.java
+/Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/service/ProductRelationRepository.java
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/service/QuotationService.java
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/service/RecommendationService.java
 /Users/venky/Library/CloudStorage/OneDrive-ZeptohSolutionsPvtLtd/Mulesoft-kit/inventory-system/src/main/java/com/clevermoe/inventory/service/ShippingOptionService.java
